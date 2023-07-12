@@ -1,26 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
   <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
+  <main>
+    <div class="container">
+      <div class="top">
+        <div class="calc">
+          <p>calc</p>
+        </div>
+        <div class="div-theme">
+          <div class="theme-text">
+            <p>THEME</p>
+          </div>
+          <div class="upwrap">
+            <div class="theme-toggle">
+              <label class="custom-radio-button">
+                <div class="label_text">1</div>
+                <input id="first" name="toggle-state" type="radio" checked />
+                <span class="checkmark"></span>
+              </label>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+              <label class="custom-radio-button">
+                <div class="label_text">2</div>
+                <input id="second" name="toggle-state" type="radio" />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="custom-radio-button">
+                <div class="label_text">3</div>
+                <input id="third" name="toggle-state" type="radio" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="screen">
+        <input type="text">
+      </div>
+      <div class="numpad">
+        <div class="div">
+          <button class="num7 btn">7</button>
+        </div>
+        <div class="div">
+          <button class="num8 btn">8</button>
+        </div>
+        <div class="div">
+          <button class="num9 btn">9</button>
+        </div>
+        <div class="div">
+          <button class="del-btn btn">DEL</button>
+        </div>
+        <div class="div">
+          <button class="num4 btn">4</button>
+        </div>
+        <div class="div">
+          <button class="num5 btn">5</button>
+        </div>
+        <div class="div">
+          <button class="num6 btn">6</button>
+        </div>
+        <div class="div">
+          <button class="plus btn">+</button>
+        </div>
+        <div class="div">
+          <button class="num1 btn">1</button>
+        </div>
+        <div class="div">
+          <button class="num2 btn">2</button>
+        </div>
+        <div class="div">
+          <button class="num3 btn">3</button>
+        </div>
+        <div class="div">
+          <button class="minus btn">-</button>
+        </div>
+        <div class="div">
+          <button class="decimal btn">.</button>
+        </div>
+        <div class="div">
+          <button class="num0 btn">0</button>
+        </div>
+        <div class="div">
+          <button class="divide btn">/</button>
+        </div>
+        <div class="div">
+          <button class="multiply btn">x</button>
+        </div>
+        <div class="div reset">
+          <button class="reset-btn btn">RESET</button>
+        </div>
+        <div class="div equal">
+          <button class="equal-btn btn">=</button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/SatyapriyaMahato">Satyapriya Mahato</a>.
+    </div>
+  </footer>
+
 </body>
+
 </html>

@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+
+}
+
+:root {
+    /* ## Colors */
+
+    /* ### Theme 1 */
+
+    /* #### Backgrounds */
+
+    --th1-main-bg: hsl(222, 26%, 31%);
+    --th1-numpad-bg: hsl(223, 31%, 20%);
+    --th1-screen-bg: hsl(224, 36%, 15%);
+
+    /* #### Keys */
+
+    --th1-Desaturated-key-bg: hsl(225, 21%, 49%);
+    --th1-Desaturated-key-shadow: hsl(224, 28%, 35%);
+
+    --th1-Red-key-bg: hsl(6, 63%, 50%);
+    --th1-Red-key-shadow: hsl(6, 70%, 34%);
+
+    --th1-keys-bg: hsl(30, 25%, 89%);
+    --th1-keys-shadow: hsl(28, 16%, 65%);
+
+    /* #### Text */
+
+    --th1-text: hsl(221, 14%, 31%);
+    --th1-White: hsl(0, 0%, 100%);
+}
+
+
+html {
+    font-size: 62.5%;
+
+}
+
+body {
+    background-color: var(--th1-main-bg);
+    overflow-x: hidden;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 54em;
+    height: 71em;
+    margin: 0 auto;
+    gap: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top,
+.screen,
+.numpad {
+    width: 100%;
+    border-radius: 1em;
+}
+
+/* Theme toggle btns start*/
+.div-theme {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.theme-text {
+    letter-spacing: .2em;
+    font-size: 1.5rem;
+}
+
+.upwrap {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.theme-toggle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 10px;
+    max-width: 100%;
+    background-color: var(--th1-numpad-bg);
+}
+
+.custom-radio-button {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.custom-radio-button input {
+    display: none;
+}
+
+.custom-radio-button .checkmark {
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 50%;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+    opacity: 0.3;
+}
+
+.custom-radio-button input:checked+.checkmark {
+    opacity: 1;
+    display: inline-block;
+    z-index: 2;
+    background-color: var(--th1-Red-key-bg);
+}
+
+label .label_text {
+    font-size: 2rem;
+    position: absolute;
+    display: block;
+    top: -1em;
+}
+
+/* theme toggle btn end */
+.calc p {
+    font-size: 4rem;
+}
+
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+}
+
+.screen {
+    min-height: 18%;
+    display: flex;
+    align-items: center;
+}
+
+.screen input {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    font-size: 6rem;
+    text-align: right;
+    padding: 0 2rem;
+    color: var(--th1-White);
+    background-color: var(--th1-screen-bg);
+}
+
+.numpad {
+    background-color: var(--th1-numpad-bg);
+    min-height: 67%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em;
+    padding: 2.5em;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    font-size: 4rem;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+    background-color: var(--th1-keys-bg);
+    box-shadow: 0 4px var(--th1-keys-shadow);
+    border-radius: .2em;
+    text-align: center;
+    color: var(--th1-text);
+}
+
+.reset {
+    grid-column: 1 / 3;
+}
+
+.equal {
+    grid-column: 3 / 5;
+}
+
+.reset-btn,
+.del-btn {
+    font-size: 3rem;
+    background-color: var(--th1-Desaturated-key-bg);
+    color: #fff;
+    box-shadow: 0 4px var(--th1-Desaturated-key-shadow);
+}
+
+.equal-btn {
+    color: #fff;
+    background-color: var(--th1-Red-key-bg);
+    box-shadow: 0 4px var(--th1-Red-key-shadow);
+}
+
+.btn:hover {
+    cursor: pointer;
+    filter: brightness(1.4);
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
