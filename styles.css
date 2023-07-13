@@ -8,34 +8,84 @@
 
 }
 
-:root {
+:root,
+.theme-1 {
     /* ## Colors */
 
     /* ### Theme 1 */
 
     /* #### Backgrounds */
 
-    --th1-main-bg: hsl(222, 26%, 31%);
-    --th1-numpad-bg: hsl(223, 31%, 20%);
-    --th1-screen-bg: hsl(224, 36%, 15%);
+    --main-bg: hsl(222, 26%, 31%);
+    --numpad-bg: hsl(223, 31%, 20%);
+    --screen-bg: hsl(224, 36%, 15%);
 
     /* #### Keys */
 
-    --th1-Desaturated-key-bg: hsl(225, 21%, 49%);
-    --th1-Desaturated-key-shadow: hsl(224, 28%, 35%);
+    --Desaturated-key-bg: hsl(225, 21%, 49%);
+    --Desaturated-key-shadow: hsl(224, 28%, 35%);
 
-    --th1-Red-key-bg: hsl(6, 63%, 50%);
-    --th1-Red-key-shadow: hsl(6, 70%, 34%);
+    --Red-key-bg: hsl(6, 63%, 50%);
+    --Red-key-shadow: hsl(6, 70%, 34%);
 
-    --th1-keys-bg: hsl(30, 25%, 89%);
-    --th1-keys-shadow: hsl(28, 16%, 65%);
+    --keys-bg: hsl(30, 25%, 89%);
+    --keys-shadow: hsl(28, 16%, 65%);
 
     /* #### Text */
 
-    --th1-text: hsl(221, 14%, 31%);
-    --th1-White: hsl(0, 0%, 100%);
+    --text: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
 }
 
+.theme-2 {
+    /* #### Backgrounds */
+
+    --main-bg: hsl(0, 0%, 90%);
+    --numpad-bg: hsl(0, 5%, 81%);
+    --screen-bg: hsl(0, 0%, 93%);
+
+    /* #### Keys */
+
+    --Desaturated-key-bg: hsl(185, 42%, 37%);
+    --Desaturated-key-shadow: hsl(185, 58%, 25%);
+
+    --Red-key-bg: hsl(25, 98%, 40%);
+    --Red-key-shadow: hsl(25, 99%, 27%);
+    --keys-bg: hsl(45, 7%, 89%);
+    --keys-shadow: hsl(35, 11%, 61%);
+
+    /* #### Text */
+
+    --text: hsl(60, 10%, 19%);
+    --White: hsl(0, 0%, 100%);
+}
+
+.theme-3 {
+    /* #### Backgrounds */
+
+    --main-bg: hsl(268, 75%, 9%);
+    --numpad-bg: hsl(268, 71%, 12%);
+    --screen-bg: hsl(268, 71%, 12%);
+
+    /* #### Keys */
+
+    --Desaturated-key-bg: hsl(281, 89%, 26%);
+    ;
+    --Desaturated-key-shadow: hsl(285, 91%, 52%);
+    ;
+
+    --Red-key-bg: hsl(176, 100%, 44%);
+    --Red-key-shadow: hsl(177, 92%, 70%);
+
+    --keys-bg: hsl(268, 47%, 21%);
+    --keys-shadow: hsl(290, 70%, 36%);
+
+    /* #### Text */
+
+    --text: hsl(52, 100%, 62%);
+    /* --text:  hsl(198, 20%, 13%); */
+    --White: hsl(0, 0%, 100%);
+}
 
 html {
     font-size: 62.5%;
@@ -43,7 +93,7 @@ html {
 }
 
 body {
-    background-color: var(--th1-main-bg);
+    background-color: var(--main-bg);
     overflow-x: hidden;
 }
 
@@ -70,6 +120,7 @@ main {
 .numpad {
     width: 100%;
     border-radius: 1em;
+    color: var(--text);
 }
 
 /* Theme toggle btns start*/
@@ -96,7 +147,7 @@ main {
     align-items: flex-start;
     border-radius: 10px;
     max-width: 100%;
-    background-color: var(--th1-numpad-bg);
+    background-color: var(--numpad-bg);
 }
 
 .custom-radio-button {
@@ -115,7 +166,7 @@ main {
 .custom-radio-button .checkmark {
     width: calc(100% - 6px);
     height: calc(100% - 6px);
-    background-color: hsl(223, 31%, 20%);
+    background-color: var(--numpad-bg);
     border-radius: 50%;
     display: inline-block;
     transition: opacity 0.3s ease;
@@ -126,7 +177,12 @@ main {
     opacity: 1;
     display: inline-block;
     z-index: 2;
-    background-color: var(--th1-Red-key-bg);
+    background-color: var(--Red-key-bg);
+}
+
+.custom-radio-button input:checked+.checkmark:hover {
+    filter: brightness(1.5);
+    cursor: pointer;
 }
 
 label .label_text {
@@ -146,14 +202,18 @@ label .label_text {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
-
+    color: var(--text);
 }
 
 .screen {
     min-height: 18%;
     display: flex;
     align-items: center;
+
+}
+
+.th1-top {
+    color: var(--keys-bg);
 }
 
 .screen input {
@@ -165,12 +225,12 @@ label .label_text {
     font-size: 6rem;
     text-align: right;
     padding: 0 2rem;
-    color: var(--th1-White);
-    background-color: var(--th1-screen-bg);
+    color: var(--White);
+    background-color: var(--screen-bg);
 }
 
 .numpad {
-    background-color: var(--th1-numpad-bg);
+    background-color: var(--numpad-bg);
     min-height: 67%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -185,11 +245,11 @@ label .label_text {
     font-weight: 700;
     width: 100%;
     height: 100%;
-    background-color: var(--th1-keys-bg);
-    box-shadow: 0 4px var(--th1-keys-shadow);
+    background-color: var(--keys-bg);
+    box-shadow: 0 4px var(--keys-shadow);
     border-radius: .2em;
     text-align: center;
-    color: var(--th1-text);
+    color: var(--text);
 }
 
 .reset {
@@ -203,23 +263,21 @@ label .label_text {
 .reset-btn,
 .del-btn {
     font-size: 3rem;
-    background-color: var(--th1-Desaturated-key-bg);
+    background-color: var(--Desaturated-key-bg);
     color: #fff;
-    box-shadow: 0 4px var(--th1-Desaturated-key-shadow);
+    box-shadow: 0 4px var(--Desaturated-key-shadow);
 }
 
 .equal-btn {
     color: #fff;
-    background-color: var(--th1-Red-key-bg);
-    box-shadow: 0 4px var(--th1-Red-key-shadow);
+    background-color: var(--Red-key-bg);
+    box-shadow: 0 4px var(--Red-key-shadow);
 }
 
 .btn:hover {
     cursor: pointer;
     filter: brightness(1.4);
 }
-
-
 
 .attribution {
     font-size: 11px;
