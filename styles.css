@@ -115,9 +115,7 @@ main {
     justify-content: space-between;
 }
 
-.top,
-.screen,
-.numpad {
+.top {
     width: 100%;
     border-radius: 1em;
     color: var(--text);
@@ -206,7 +204,7 @@ label .label_text {
 }
 
 .screen {
-    min-height: 18%;
+    min-height: 20%;
     display: flex;
     align-items: center;
 
@@ -214,6 +212,14 @@ label .label_text {
 
 .th1-top {
     color: var(--keys-bg);
+}
+
+form {
+    width: 100%;
+    height: 63em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .screen input {
@@ -231,7 +237,7 @@ label .label_text {
 
 .numpad {
     background-color: var(--numpad-bg);
-    min-height: 67%;
+    min-height: 76%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2em;
@@ -279,6 +285,7 @@ label .label_text {
     filter: brightness(1.4);
 }
 
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -286,4 +293,17 @@ label .label_text {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 50%;
+
+    }
+
+    .container {
+        width: 37.5em;
+        min-width: 37.5em;
+        /* height: 90vh; */
+    }
 }
