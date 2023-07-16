@@ -73,7 +73,7 @@ delBtn.addEventListener("click", function (e) {
 });
 
 // keyboard inputfunctionality
-document.addEventListener("keypress", (e) => {
+document.addEventListener("keydown", (e) => {
     let key = e.key;
     if (key == '*') {
         key = 'x';
@@ -94,40 +94,7 @@ document.addEventListener("keypress", (e) => {
     inputNum.value = str;
     console.log(inputNum.value);
     inputNum.focus();
-
 }
 );
-// document.addEventListener("keydown", (event) => {
-//   const key = event.key;
-//   const keyCode = event.keyCode;
-//   const inputNum = document.getElementById("myInputField"); // Assuming you have an input field with the id "myInputField"
-//   let str = inputNum.value;
-//   const ops = /[\+\-\*\/]/; // Regular expression for allowed operators
-//   const allowedKeys = /[\d\+\-\*\/\.\(\)]/; // Regular expression for allowed keys
-
-//   if (keyCode === 56) {
-//     // Convert "*" key code (56) to "x"
-//     key = "x";
-//   }
-
-//   if (keyCode === 8) {
-//     // Backspace key code (8)
-//     str = str.slice(0, -1);
-//     event.preventDefault();
-//   } else if (allowedKeys.test(key) && keyCode !== 229) {
-//     // Exclude non-character input and IME input (key code 229)
-//     if (str === "" && ops.test(key)) {
-//       event.preventDefault();
-//     } else if (ops.test(str.slice(-1)) && ops.test(key) || (!allowedKeys.test(key))) {
-//       event.preventDefault();
-//     } else {
-//       str += key;
-//     }
-//   }
-
-//   inputNum.value = str;
-//   console.log(inputNum.value);
-//   inputNum.focus();
-// });
 
 
