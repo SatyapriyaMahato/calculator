@@ -242,6 +242,7 @@ form {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2em;
     padding: 2.5em;
+    border-radius: 1em;
 }
 
 .btn {
@@ -256,6 +257,11 @@ form {
     border-radius: .2em;
     text-align: center;
     color: var(--text);
+}
+
+.btn:hover {
+    cursor: pointer;
+    filter: brightness(1.4);
 }
 
 .reset {
@@ -280,10 +286,7 @@ form {
     box-shadow: 0 4px var(--Red-key-shadow);
 }
 
-.btn:hover {
-    cursor: pointer;
-    filter: brightness(1.4);
-}
+
 
 
 .attribution {
