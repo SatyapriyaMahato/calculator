@@ -16,8 +16,6 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -31,15 +29,13 @@ Users should be able to:
 
 ### Screenshot
 
-### Screenshot
-
 ![](./screenshots/desktop-screenshot.jpg)
 ![](./screenshots/mobile-screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/SatyapriyaMahato/bookmark-landing-page)
-- Live Site URL: [Live site](https://satyapriyamahato.github.io/bookmark-landing-page/)
+- Solution URL: [Solution](https://github.com/SatyapriyaMahato/calculator)
+- Live Site URL: [Live site](https://satyapriyamahato.github.io/calculator/)
 
 ## My process
 
