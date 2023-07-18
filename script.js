@@ -1,8 +1,8 @@
 const equalBtn = document.querySelector(".equal-btn");
-const resetBtn = document.querySelector(".reset-btn");
-const delBtn = document.querySelector(".del-btn");
-const inputNum = document.querySelector(".input");
-const inputKeys = [...document.querySelectorAll(".num")];
+resetBtn = document.querySelector(".reset-btn");
+delBtn = document.querySelector(".del-btn");
+inputNum = document.querySelector(".input");
+inputKeys = [...document.querySelectorAll(".num")];
 
 
 // themes and radio button functionality
